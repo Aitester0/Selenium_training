@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -26,6 +27,13 @@ public class Demo4SalesForce
         emp.selectByVisibleText("101 - 200 employees");
 
         driver.findElement(By.xpath("(//div[@class='checkbox-ui'])[2]")).click();
-        driver.quit();
+        driver.findElement(By.xpath("(//div[@class='checkbox-ui'])[2]")).click();
+
+        WebElement SelectCountry= driver.findElement(By.name("CompanyCountry"));
+        Select countrySelect=new Select(SelectCountry);
+        countrySelect.selectByVisibleText("Maldives");
+
+        driver.findElement(By.name("start my free trial")).click();
+
     }
 }
