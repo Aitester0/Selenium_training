@@ -22,7 +22,7 @@ public class Task2CitiBank {
         driver.switchTo().window(windows.get(1));
         driver.findElement(By.xpath("//div[@class='fl cup pt3']")).click();
         ArrayList<String> window1=new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(windows.get(1));
+        driver.switchTo().window(window1.get(1));
 
         driver.findElement(By.xpath("//a[text()='select your product type']")).click();
         driver.findElement(By.xpath("//a[text()='Credit Card']")).click();
